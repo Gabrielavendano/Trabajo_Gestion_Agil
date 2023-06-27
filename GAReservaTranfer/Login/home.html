@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Home del Pasajero</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scriptshome.js"></script>
+</head>
+<body>
+  <header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1 id="welcomeMessage">Bienvenido </h1>
+  
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#" id="loginLink">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>¡Disfruta del viaje!</h2>
+      <p>Relájate y deja que te llevemos a tu destino.</p>
+      <a href="#" class="cta-button">Reservar un viaje</a>
+    </div>
+  </section>
+  <section class="features">
+    <h2>Características</h2>
+    <div class="feature">
+      <img src="car-icon.png" alt="Icono de automóvil">
+      <h3>Transporte seguro</h3>
+      <p>Nuestros conductores son profesionales y capacitados para brindarte un viaje seguro.</p>
+    </div>
+    <div class="feature">
+      <img src="map-icon.png" alt="Icono de mapa">
+      <h3>Localización en tiempo real</h3>
+      <p>Sigue tu ruta en tiempo real y mantente informado durante todo el viaje.</p>
+    </div>
+    <div class="feature">
+      <img src="payment-icon.png" alt="Icono de pago">
+      <h3>Pago sin complicaciones</h3>
+      <p>Realiza pagos de forma rápida y segura a través de nuestra plataforma.</p>
+    </div>
+  </section>
+  <footer>
+    <button onclick="redirigir('home.html')">Español</button>
+    <button onclick="redirigir('homeenglish.html')">English</button>
+    <p>&copy; 2023 Todos los derechos reservados</p>
+  </footer>
+  
+  <script>
+    function redirigir(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
