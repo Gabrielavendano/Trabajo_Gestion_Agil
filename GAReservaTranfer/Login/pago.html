@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #333;
+        }
+                header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    background-color: #333;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 270px;
+    text-align: center;
+  }
+  div {
+    text-align: center;
+  }
+    </style>
+</head>
+<body>
+    <div>
+        <h1></h1>
+  
+        <h2>Ticket de Reserva</h2>
+        <p>Nombre del Chofer: <span id="nombreChofer"></span></p>
+        
+        <h2>Información de Pago</h2>
+        <p>Precio Total de viaje $18000</p>
+        
+        <h2>Generar Boleto</h2>
+        <p>¿Desea recibir el boleto por correo electrónico?</p>
+        <button onclick="enviarBoleto()">Sí</button>
+        <button onclick="continuarReserva()">No</button>
+    </div>
+
+  
+  <footer>
+    <p>&copy; 2023 Todos los derechos reservados</p>
+  </footer>
+  <script>
+    // Obtén los parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+    const nombreChofer = params.get('nombre');
+    
+    // Actualiza el nombre del chofer en el ticket
+    document.getElementById('nombreChofer').textContent = nombreChofer;
+    
+    function enviarBoleto() {
+      // Puedes agregar aquí la lógica para enviar el boleto por correo electrónico
+      alert('Se ha enviado el boleto a su correo electrónico.');
+      window.location.href = 'home.html';
+    }
+    
+    function continuarReserva() {
+      // Continúa a la página de reserva de chofer
+      window.location.href = 'home.html';
+    }
+  </script>
+</body>
+</html>

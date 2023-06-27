@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styledatos.css">
     <style>
+        header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    background-color: #333;
+  }
         table {
           border-collapse: collapse;
           width: 100%;
         }
         
         th, td {
-          border: 1px solid black;
-          padding: 8px;
-          text-align: left;
+          border: 3px solid black;
+          padding: 40px;
+          text-align: center;
         }
         
         th {
-          background-color: #f2f2f2;
+          background-color: #2c3e50;
         }
         
         .disponible {
@@ -27,6 +38,12 @@
         .no-disponible {
           color: red;
         }
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
       </style>
 </head>
 <body>
@@ -48,23 +65,51 @@
           <td class="disponible">Disponible</td>
           <td>4</td>
           <td>Automóvil</td>
-          <td><button onclick="reservarChofer('Juan Garcia')">Reservar</button></td>
+          <td><button onclick="reservarChofer('Juan Garcia', 'Disponible')">Reservar</button></td>
         </tr>
         <tr>
           <td>Jose Antonio</td>
           <td class="no-disponible">No disponible</td>
           <td>7</td>
           <td>Van</td>
-          <td><button onclick="reservarChofer('Jose Antonio')">Reservar</button></td>
+          <td><button onclick="reservarChofer('Jose Antonio', 'No Disponible')">Reservar</button></td>
         </tr>
-        <!-- Agrega más filas según la cantidad de choferes -->
+        <tr>
+          <td>Antonia Perez</td>
+          <td class="disponible">Disponible</td>
+          <td>3</td>
+          <td>Automóvil</td>
+          <td><button onclick="reservarChofer('Antonia Perez', 'Disponible')">Reservar</button></td>
+        </tr>
+        <tr>
+          <td>Alfonso Benedo</td>
+          <td class="disponible">Disponible</td>
+          <td>3</td>
+          <td>Van</td>
+          <td><button onclick="reservarChofer('Alfonso Benedo', 'Disponible')">Reservar</button></td>
+        </tr>
       </tbody>
     </table>
-    
+    <footer>
+      <a href="home.html" class="cta-button" >Volver</a>
+      <p>&copy; 2023 Todos los derechos reservados</p>
+    </footer>    
     <script>
-      function reservarChofer(nombre) {
-        // Puedes agregar aquí la lógica para reservar el chofer
-        alert('Has reservado al chofer ' + nombre);
+      function reservarChofer(nombre, disponibilidad) {
+        if (disponibilidad === 'Disponible') {
+          // Puedes agregar aquí la lógica para reservar el chofer
+          var montoViaje = calcularMontoViaje(); // Lógica para calcular el monto del viaje
+          
+          // Redirige a la página de pago
+          window.location.href = 'pago.html?nombre=' + encodeURIComponent(nombre) + '&monto=' + encodeURIComponent(montoViaje);
+        } else {
+          alert('El chofer ' + nombre + ' no está disponible para reservar.');
+        }
+      }
+      
+      function calcularMontoViaje() {
+        // Puedes agregar aquí la lógica para calcular el monto del viaje
+        return 50; // Ejemplo: monto fijo de 50 unidades monetarias
       }
     </script>
     

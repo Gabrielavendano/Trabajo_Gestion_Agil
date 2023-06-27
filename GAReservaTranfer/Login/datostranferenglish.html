@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+        }
+        
+        th {
+          background-color: #f2f2f2;
+        }
+        
+        .disponible {
+          color: green;
+        }
+        
+        .no-disponible {
+          color: red;
+        }
+      </style>
+</head>
+<body>
+    <h1>Transfers in Operation</h1>
+  
+    <table>
+      <thead>
+        <tr>
+            <th>Name</th>
+            <th>Availability</th>
+            <th>Seating Capacity</th>
+            <th>Vehicle</th>
+            <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Juan Garcia</td>
+          <td class="disponible">Available</td>
+          <td>4</td>
+          <td>car</td>
+          <td><button onclick="reservarChofer('Juan Garcia', 'Disponible')">reserve</button></td>
+        </tr>
+        <tr>
+          <td>Jose Antonio</td>
+          <td class="no-disponible">not available</td>
+          <td>7</td>
+          <td>Van</td>
+          <td><button onclick="reservarChofer('Jose Antonio', 'No Disponible')">Reserve</button></td>
+        </tr>
+        <tr>
+          <td>Antonia Perez</td>
+          <td class="disponible">Available</td>
+          <td>3</td>
+          <td>Car</td>
+          <td><button onclick="reservarChofer('Antonia Perez', 'Disponible')">Reserve</button></td>
+        </tr>
+        <tr>
+          <td>Alfonso Benedo</td>
+          <td class="disponible">Available</td>
+          <td>3</td>
+          <td>Van</td>
+          <td><button onclick="reservarChofer('Alfonso Benedo', 'Disponible')">Reserve</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <script>
+ function reservarChofer(nombre, disponibilidad) {
+      if (disponibilidad === 'Disponible') {
+        // Puedes agregar aquí la lógica para reservar el chofer
+        alert('You have booked the driver ' + nombre);
+      } else {
+        alert('The Driver ' + nombre + ' is not available to reserve');
+      }
+    }
+    </script>
+    
+</body>
+</html>
