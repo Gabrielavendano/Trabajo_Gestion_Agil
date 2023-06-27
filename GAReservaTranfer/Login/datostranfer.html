@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+        }
+        
+        th {
+          background-color: #f2f2f2;
+        }
+        
+        .disponible {
+          color: green;
+        }
+        
+        .no-disponible {
+          color: red;
+        }
+      </style>
+</head>
+<body>
+    <h1>Transfers en Funcionamiento</h1>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Disponibilidad</th>
+          <th>Capacidad de Asientos</th>
+          <th>Vehículo</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Juan Garcia</td>
+          <td class="disponible">Disponible</td>
+          <td>4</td>
+          <td>Automóvil</td>
+          <td><button onclick="reservarChofer('Juan Garcia')">Reservar</button></td>
+        </tr>
+        <tr>
+          <td>Jose Antonio</td>
+          <td class="no-disponible">No disponible</td>
+          <td>7</td>
+          <td>Van</td>
+          <td><button onclick="reservarChofer('Jose Antonio')">Reservar</button></td>
+        </tr>
+        <!-- Agrega más filas según la cantidad de choferes -->
+      </tbody>
+    </table>
+    
+    <script>
+      function reservarChofer(nombre) {
+        // Puedes agregar aquí la lógica para reservar el chofer
+        alert('Has reservado al chofer ' + nombre);
+      }
+    </script>
+    
+</body>
+</html>
