@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styledatos.css">
+    <style>
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+      }
+      
+      h1 {
+        margin: 0;
+        font-size: 32px;
+        background-color: #333;
+      }
+      
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+        
+      th, td {
+        border: 3px solid black;
+        padding: 40px;
+        text-align: center;
+      }
+        
+      th {
+        background-color: #2c3e50;
+      }
+      
+      .disponible {
+        color: green;
+      }
+      
+      .no-disponible {
+        color: red;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista de reservas</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Chofer</th>
+          <th>Vehículo</th>
+          <th>Modelo</th>
+          <th>Patente</th>
+          <th>Acciónes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jorge Torres</td>
+          <td>Juan Garcia</td>
+          <td>Automóvil</td>
+          <td>Nissan Versa</td>
+          <td>PXDT00</td>
+          <td><button onclick="cancelarReserva('Jorge Torres', 'Juan Garcia', 'Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Alvaro Muñoz</td>
+          <td>Juan Garcia</td>
+          <td>Automóvil</td>
+          <td>Nissan Versa</td>
+          <td>PXDT00</td>
+          <td><button onclick="cancelarReserva('Alvaro Muñoz', 'Juan Garcia', 'Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Han Dae-Song</td>
+          <td>Juan Garcia</td>
+          <td>Automóvil</td>
+          <td>Nissan Versa</td>
+          <td>PXDT00</td>
+          <td><button onclick="cancelarReserva('Han Dae-Song', 'Juan Garcia', 'Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Teo Domingo</td>
+          <td>Jose Antonio</td>
+          <td>Van</td>
+          <td>Mercedes Benz Sprinter</td>
+          <td>RRDT55</td>
+          <td><button onclick="cancelarReserva('Teo Domingo', 'Jose Antonio', 'No Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Tatiana Tellez</td>
+          <td>Jose Antonio</td>
+          <td>Van</td>
+          <td>Mercedes Benz Sprinter</td>
+          <td>RRDT55</td>
+          <td><button onclick="cancelarReserva('Tatiana Tellez', 'Jose Antonio', 'No Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Pablo Aranda</td>
+          <td>Jose Antonio</td>
+          <td>Van</td>
+          <td>Mercedes Benz Sprinter</td>
+          <td>RRDT55</td>
+          <td><button onclick="cancelarReserva('Pablo Aranda', 'Jose Antonio', 'No Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Toni Marrero</td>
+          <td>Jose Antonio</td>
+          <td>Van</td>
+          <td>Mercedes Benz Sprinter</td>
+          <td>RRDT55</td>
+          <td><button onclick="cancelarReserva('Toni Marrero', 'Jose Antonio', 'No Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Jose-Luis San Miguel</td>
+          <td>Jose Antonio</td>
+          <td>Van</td>
+          <td>Mercedes Benz Sprinter</td>
+          <td>RRDT55</td>
+          <td><button onclick="cancelarReserva('Jose-Luis San Miguel', 'Jose Antonio', 'No Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Abril Burgos</td>
+          <td>Jose Antonio</td>
+          <td>Van</td>
+          <td>Mercedes Benz Sprinter</td>
+          <td>RRDT55</td>
+          <td><button onclick="cancelarReserva('Abril Burgos', 'Jose Antonio', 'No Disponible')">Cancelar reserva</button></td>
+        </tr>
+        <tr>
+          <td>Valentina Aragon</td>
+          <td>Jose Antonio</td>
+          <td>Van</td>
+          <td>Mercedes Benz Sprinter</td>
+          <td>RRDT55</td>
+          <td><button onclick="cancelarReserva('Valentina Aragon', 'Jose Antonio', 'No Disponible')">Cancelar reserva</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <footer>
+      <a href="home_spanish.html" class="cta-button" >Volver</a>
+      <p>&copy; 2023 Todos los derechos reservados</p>
+    </footer>    
+    <script>
+      function cancelarReserva(cliente, chofer, disponibilidad) {
+        if (disponibilidad === 'No Disponible') {
+          // Cambiar estado a Disponible
+        }  
+        alert('El viaje de ' + cliente + ' con el chofer ' + chofer + ' ha sido cancelado.');
+        window.location.href = 'home_spanish.html';
+      }
+    </script>
+  </body>
+</html>
